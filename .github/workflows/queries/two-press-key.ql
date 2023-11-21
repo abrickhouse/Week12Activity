@@ -32,4 +32,4 @@ predicate calls(Function caller, Function callee) {
 from Function test, Function callee
 where isTest(test) and
       calls(test, callee)
-select callee, "calls function pressActionKey"
+select test, "calls function pressActionKey"
