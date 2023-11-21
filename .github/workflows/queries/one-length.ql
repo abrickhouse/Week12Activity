@@ -10,9 +10,8 @@ import javascript
  * Holds if a function is longer than 10 lines.
  */
 predicate isMoreTenLong(Function f) {
- exists(FunctionNode func |
-    func.getNumLines() > 10 and
-    f = func.getName()
+ exists(
+    f.getNumLines() > 10
   )
 }
 
