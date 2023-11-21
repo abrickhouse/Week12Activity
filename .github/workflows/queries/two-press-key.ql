@@ -21,7 +21,7 @@ predicate isTest(Function test) {
 /**
 * Holds if `caller` contains a call to `pressActionKey`.
 */
-predicate calls(Function caller, callee) {
+predicate calls(Function caller, Function callee) {
   exists(DataFlow::CallNode call |
     call.getEnclosingFunction() = caller and
     call.getACallee() = callee and 
