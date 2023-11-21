@@ -11,7 +11,8 @@ import javascript
  */
 predicate isMoreTenLong(Function f) {
  exists(FunctionNode func |
-    func.getNumLines() > 10
+    func.getNumLines() > 10 and
+    f = func.getName()
   )
 }
 
